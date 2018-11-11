@@ -10,11 +10,13 @@ import UIKit
 
 class ___VARIABLE_sceneName___Worker {
 
-
     // MARK: - Business Logic
 
     func doSomeWork() {
-
         // TODO: Do the work
+    }
+    
+    deinit {
+        print("___VARIABLE_sceneName___Worker \(#function)")
     }
 }

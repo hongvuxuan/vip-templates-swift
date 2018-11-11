@@ -10,11 +10,17 @@ import UIKit
 
 final class ___VARIABLE_sceneName___Configurator {
 
-
     // MARK: - Singleton
 
     static let sharedInstance: ___VARIABLE_sceneName___Configurator = ___VARIABLE_sceneName___Configurator()
-
+    
+    init() {
+        
+    }
+    
+    deinit {
+        print("___VARIABLE_sceneName___Configurator \(#function)")
+    }
 
     // MARK: - Configuration
 
@@ -23,7 +29,8 @@ final class ___VARIABLE_sceneName___Configurator {
         let router = ___VARIABLE_sceneName___Router(viewController: viewController)
         let presenter = ___VARIABLE_sceneName___Presenter(output: viewController)
         let interactor = ___VARIABLE_sceneName___Interactor(output: presenter)
-
+        
+        router.dataStore = interactor
         viewController.output = interactor
         viewController.router = router
     }
