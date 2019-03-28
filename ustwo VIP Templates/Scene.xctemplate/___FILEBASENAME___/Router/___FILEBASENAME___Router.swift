@@ -16,6 +16,7 @@ protocol ___VARIABLE_sceneName___RouterProtocol {
 }
 
 protocol ___VARIABLE_sceneName___DataPassing {
+    
     var dataStore: ___VARIABLE_sceneName___DataStore? { get }
 }
 
